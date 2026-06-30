@@ -1,3 +1,5 @@
+# include <vector>
+using namespace std;
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
@@ -13,6 +15,18 @@ public:
             else{
                 freq--;
             }
+        }
+        int count =0;
+        for (int val : nums){
+            if (val == ans){
+                count ++;
+            }
+        }
+        if (count > n/2) {
+            return ans;
+        }
+        else {
+            return -1;
         }
             return ans;
     }
